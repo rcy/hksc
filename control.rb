@@ -8,10 +8,7 @@ def make_sequence s1, s2, s3, s4
   sequence
 end
 
-s = TCPSocket.new('10.10.100.254', 8899)
-for i in 0..100
-  puts i
-  s.send(make_sequence(i,i,i,i), 0)
-  s.flush
-  sleep 0.1
-end
+#s = TCPSocket.new('10.10.100.254', 8899)
+s = TCPSocket.new('127.0.0.1', 8899)
+s.send(make_sequence(0,0,0,0), 0)
+s.flush

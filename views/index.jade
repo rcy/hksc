@@ -3,3 +3,10 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+
+  .servo(data-servo=1, data-position=50)
+    button(data-direction=-1) left
+    button(data-direction=1) right
+
+  script(src="jquery.js")
+  script(src="control.js")
